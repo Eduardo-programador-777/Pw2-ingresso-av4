@@ -1,0 +1,49 @@
+driver jdbc(por sgbd)
+
+Java persistence api(jpa)
+   |
+   === anotações
+   |
+   === menos queries
+
+
+
+                SUA APLICAÇÃO JAVA
+                       │
+                       ▼
+                Spring Data JPA
+                       │
+                       ▼
+                    JPA
+             (especificação/API)
+                       │
+                       ▼
+                   Hibernate
+             (implementação ORM)
+                       │
+                       ▼
+                     JDBC
+                       │
+                       ▼
+                Driver JDBC
+              (PostgreSQL etc.)
+                       │
+                       ▼
+                  BANCO DE DADOS
+
+
+
+ORM 
+
+tab -> classe 
+(alteracao na classe = alteraçao no banco)
+
+
+
+
+
+ANOTACOES:
+
+    @Id = PRIMARY KEY NO BANCO
+    @Column(name="ID_FILME")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
