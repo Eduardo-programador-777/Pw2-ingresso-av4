@@ -52,7 +52,7 @@ public class FilmeController {
     public ResponseEntity<Void> deletar(@PathVariable Long id){
         var existe = filmeRepository.findById(id);
         if(existe.isPresent()) {
-            filmeRepository.delete(existe.get());
+            filmeRepository.delete(existe.get()-);
             return ResponseEntity.ok().build();
         }
          return ResponseEntity.notFound().build();
